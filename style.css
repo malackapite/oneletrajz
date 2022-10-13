@@ -1,0 +1,48 @@
+html{
+    background-color: #fefff7;
+}
+main{
+    background-color: #fff4d6;
+    display:grid;
+    grid-template-areas: "b a";
+    grid-template-columns: 33% auto;
+}
+aside{
+    grid-area: b;
+    background-color: #ffecb9;
+    padding: 20px;
+}
+article{
+    padding: 10px 30px;
+    grid-area: a;
+}
+img{
+    width: 200px;
+    border-radius: 100%;
+}
+h1{
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;    
+}
+h2{
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h3{
+    font-family: Arial, Helvetica, sans-serif;    
+}
+dt{
+    display:list-item;
+    list-style-type: disc;
+    margin-left:2em;
+}
+#kep{
+    text-align: center;
+}
+#skill ul{
+    column-count: 2;
+}
+#nyelv ul{
+    column-count: 6;
+}
