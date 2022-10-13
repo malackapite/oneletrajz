@@ -1,11 +1,14 @@
 html{
     background-color: #fefff7;
+    font-family: Arial, Helvetica, sans-serif;
 }
 main{
     background-color: #fff4d6;
     display:grid;
     grid-template-areas: "b a";
     grid-template-columns: 33% auto;
+    width: 75%;
+    margin: auto;
 }
 aside{
     grid-area: b;
@@ -22,12 +25,10 @@ img{
 }
 h1{
     text-transform: uppercase;
-    font-family: Arial, Helvetica, sans-serif;    
 }
 h2{
     letter-spacing: 5px;
     text-transform: uppercase;
-    font-family: Arial, Helvetica, sans-serif;
 }
 h3{
     font-family: Arial, Helvetica, sans-serif;    
@@ -35,7 +36,9 @@ h3{
 dt{
     display:list-item;
     list-style-type: disc;
-    margin-left:2em;
+    margin-left:40px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 #kep{
     text-align: center;
@@ -43,6 +46,21 @@ dt{
 #skill ul{
     column-count: 2;
 }
+#skill li{
+    margin-bottom: 30px;
+}
 #nyelv ul{
     column-count: 6;
+}
+.fa-download{
+    float: right;
+}
+#interests div {
+    column-count: 2;
+}
+#interests div *{
+    margin: auto;
+}
+article>div{
+    margin-bottom: 50px;
 }
