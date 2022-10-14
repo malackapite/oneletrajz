@@ -1,66 +1,109 @@
-html{
-    background-color: #fefff7;
+html {
     font-family: Arial, Helvetica, sans-serif;
 }
-main{
-    background-color: #fff4d6;
-    display:grid;
+
+main {
+    display: grid;
     grid-template-areas: "b a";
     grid-template-columns: 33% auto;
     width: 75%;
     margin: auto;
+    background-color: var(--main);
 }
-aside{
+
+aside {
     grid-area: b;
-    background-color: #ffecb9;
     padding: 20px;
+    background-color: var(--oldal);
 }
-article{
+
+article {
     padding: 10px 30px;
     grid-area: a;
 }
-img{
+
+img {
     width: 200px;
     border-radius: 100%;
 }
-h1{
+
+h1 {
     text-transform: uppercase;
 }
-h2{
+
+h2 {
     letter-spacing: 5px;
     text-transform: uppercase;
 }
-h3{
-    font-family: Arial, Helvetica, sans-serif;    
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
 }
-dt{
-    display:list-item;
+
+dt {
+    display: list-item;
     list-style-type: disc;
-    margin-left:40px;
+    margin-left: 40px;
     text-transform: uppercase;
     font-weight: bold;
 }
-#kep{
+
+#kep {
     text-align: center;
 }
-#skill ul{
+
+li {
+    margin-bottom: 10px;
+}
+
+#skill ul {
     column-count: 2;
 }
-#skill li{
+
+#skill li {
     margin-bottom: 30px;
 }
-#nyelv ul{
+
+#nyelv ul {
     column-count: 6;
 }
-.fa-download{
+
+.fa-download {
     float: right;
 }
+
 #interests div {
-    column-count: 2;
+    column-count: 3;
+    display: inline;
 }
-#interests div *{
+
+#interests div * {
     margin: auto;
 }
-article>div{
+
+article>div {
     margin-bottom: 50px;
+}
+
+aside>div {
+    margin-bottom: 30px;
+}
+
+.light-theme {
+    background-color: #fefff7;
+    --main: #fff4d6;
+    --oldal: #ffecb9;
+    color: black;
+}
+
+.dark-theme {
+    background-color: #2b2b2b;
+    --oldal: #191615;
+    --main: #212121;
+    color: white;
+
+}
+
+* {
+    transition: background-color 0.6s ease;
 }
