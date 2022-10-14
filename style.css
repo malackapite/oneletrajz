@@ -1,23 +1,26 @@
 html {
     font-family: Arial, Helvetica, sans-serif;
 }
-
+body{
+    margin:0px;
+}
 main {
     display: grid;
     grid-template-areas: "b a";
-    grid-template-columns: 33% auto;
+    grid-template-columns: 1fr 2fr;
     width: 75%;
     margin: auto;
     background-color: var(--main);
 }
 
-aside {
+aside { 
     grid-area: b;
     padding: 20px;
     background-color: var(--oldal);
 }
 
 article {
+    background-color:var(--article);
     padding: 10px 30px;
     grid-area: a;
 }
@@ -40,6 +43,11 @@ h3 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+h4{
+    font-size: 18px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
 dt {
     display: list-item;
     list-style-type: disc;
@@ -65,16 +73,18 @@ li {
 }
 
 #nyelv ul {
-    column-count: 6;
+    column-count: 4;
 }
 
 .fa-download {
     float: right;
 }
 
-#interests div {
-    column-count: 3;
-    display: inline;
+#interests>div{
+    display: grid;
+    margin: auto;
+    text-align: center;
+    grid-template-columns: repeat(6,1fr);
 }
 
 #interests div * {
@@ -89,21 +99,55 @@ aside>div {
     margin-bottom: 30px;
 }
 
+#education p{
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+#education ul li::marker{
+    font-size: 30px;
+}
+
+.ev{
+    font-size: 9pt;
+}
+.suli{
+    font-size: 11pt;
+    font-weight: bold;
+}
+a{
+    color:var(--a);
+}
 .light-theme {
     background-color: #fefff7;
     --main: #fff4d6;
+    --article: #fff4d6;
     --oldal: #ffecb9;
+    --a:black;
     color: black;
 }
 
 .dark-theme {
     background-color: #2b2b2b;
-    --oldal: #191615;
     --main: #212121;
+    --article: #212121;
+    --oldal: #191615;
+    --a:white;
     color: white;
 
 }
 
 * {
-    transition: background-color 0.6s ease;
+    transition: color 0.1s ease, background-color .6s ease;
+}
+@media screen and (max-width:600px) {
+    main{
+        width: 100%;
+        margin:0px;
+        grid-template-areas: "b"
+                             "a";
+        grid-template-columns: auto;
+    }
+    h1,h2,h3,#profil>p{
+        text-align: center;
+    }
 }

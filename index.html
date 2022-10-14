@@ -6,13 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Veress Marcell</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="https://kit.fontawesome.com/3f895a7a65.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/3f895a7a65.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
+
   <body class="light-theme">
-    <main id="main">
+    <main>
       <aside>
-        <i class="fa-solid fa-moon" onclick="sotet()">
-        </i><a href="#main" download="oneletrajz"><i class="fa-solid fa-download"></i></a>        
+        <i class="fa-solid fa-moon" id="b" onmouseenter="ugral()" onmouseleave="nemUgral()" onclick="sotet()"> </i
+        ><a href="index.html" onmouseenter="rezeg()" onmouseleave="nemRezeg()" download="oneletrajz"
+          ><i class="fa-solid fa-download" id="a"></i
+        ></a>
         <div id="kep">
           <img src="kép.png" alt="kep" />
           <h1>Veress Marcell</h1>
@@ -20,17 +26,34 @@
         </div>
         <div>
           <ul class="fa-ul">
-            <li><span class="fa-li"><i class="fa-solid fa-location-dot"></i></span>Budapest - Hungary</li>
-            <li><span class="fa-li"><i class="fa-solid fa-envelope"></i></span>e@mail.com</li>
-            <li><span class="fa-li"><i class="fa-solid fa-phone"></i></span>+12 34 456 789</li>
+            <li>
+              <span class="fa-li"><i class="fa-solid fa-location-dot"></i></span
+              >Budapest - Hungary
+            </li>
+            <li>
+              <span class="fa-li"><i class="fa-solid fa-envelope"></i></span
+              >e@mail.com
+            </li>
+            <li>
+              <span class="fa-li"><i class="fa-solid fa-phone"></i></span>+12 34
+              456 789
+            </li>
           </ul>
         </div>
         <div>
           <h2>Social</h2>
           <ul class="fa-ul">
-            <li><span class="fa-li"><i class="fa-brands fa-linkedin"></i></span>Nin Csen</li>
-            <li><span class="fa-li"><i class="fa-brands fa-discord"></i></span>asd</li>
-            <li><span class="fa-li"><i class="fa-brands fa-github"></i></span>qwertz</li>
+            <li>
+              <span class="fa-li"><i class="fa-brands fa-linkedin"></i></span
+              >Nin Csen
+            </li>
+            <li>
+              <span class="fa-li"><i class="fa-brands fa-discord"></i></span>asd
+            </li>
+            <li>
+              <span class="fa-li"><i class="fa-brands fa-github"></i></span
+              >qwertz
+            </li>
           </ul>
         </div>
         <div id="profil">
@@ -42,9 +65,25 @@
             sint fugiat.
           </p>
         </div>
-        <div>
+        <div id="education">
           <h2>Education</h2>
-          <!---->
+          <ul>
+            <li>
+              <h4>Software Engineer</h4>
+              <p class="suli">Számalk-Szalézi Technikum és Szakgimnázium (Institute Studies)</p>
+              <p class="ev">2022 - in progress</p>
+            </li>
+            <li>
+              <h4>Graduation</h4>
+              <p class="suli">Veszprémi SZC Öveges József Technikum és Kollégium</p>
+              <p class="ev">2017-2021</p>
+            </li>
+            <li>
+              <h4>Primary School</h4>
+              <p class="suli">Vak Bottyán János Általános Iskola</p>
+              <p class="ev">2009-2017</p>
+            </li>
+          </ul>
         </div>
         <div id="skill">
           <h2>Skills</h2>
@@ -80,22 +119,44 @@
         </div>
         <div id="interests">
           <h2>Interests</h2>
-          <!---->
           <div>
-            <i class="fa-solid fa-computer"></i>
-            <p>Gaming</p>
-          </div>
-          <div>
-            <i class="fa-solid fa-computer"></i>
-            <p>Gaming</p>
+            <div>
+              <i class="fa-solid fa-computer"></i>
+              <p>Gaming</p>
+            </div>
+            <div>
+              <i class="fa-solid fa-code"></i>
+              <p>Coding</p>
+            </div>
+            <div>
+              <i class="fa-solid fa-cat"></i>
+              <p>Cats</p>
+            </div>
           </div>
         </div>
       </article>
     </main>
     <script>
-      function sotet(){
+      function sotet() {
         document.body.classList.toggle("dark-theme");
         document.body.classList.toggle("light-theme");
+      }
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
+      {
+        document.body.classList.toggle("dark-theme");
+        document.body.classList.toggle("light-theme");
+      }
+      function rezeg(){
+        document.getElementById('a').classList.add("fa-shake");
+      }
+      function nemRezeg(){
+        document.getElementById('a').classList.remove("fa-shake");
+      }
+      function ugral(){
+        document.getElementById('b').classList.add("fa-beat");
+      }
+      function nemUgral(){
+        document.getElementById('b').classList.remove("fa-beat");
       }
     </script>
   </body>
