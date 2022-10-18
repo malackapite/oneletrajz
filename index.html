@@ -15,8 +15,19 @@
   <body class="light-theme">
     <main>
       <aside>
-        <i class="fa-solid fa-moon" id="b" onmouseenter="ugral()" onmouseleave="nemUgral()" onclick="sotet()"> </i
-        ><a href="index.html" onmouseenter="rezeg()" onmouseleave="nemRezeg()" download="oneletrajz"
+        <i
+          class="fa-solid fa-moon"
+          id="b"
+          onmouseenter="ugral()"
+          onmouseleave="nemUgral()"
+          onclick="sotet()"
+        >
+        </i>
+        <a
+          href="oneletrajz.pdf"
+          onmouseenter="rezeg()"
+          onmouseleave="nemRezeg()"
+          download="oneletrajz.pdf"
           ><i class="fa-solid fa-download" id="a"></i
         ></a>
         <div id="kep">
@@ -70,12 +81,16 @@
           <ul>
             <li>
               <h4>Software Engineer</h4>
-              <p class="suli">Számalk-Szalézi Technikum és Szakgimnázium (Institute Studies)</p>
+              <p class="suli">
+                Számalk-Szalézi Technikum és Szakgimnázium (Institute Studies)
+              </p>
               <p class="ev">2022 - in progress</p>
             </li>
             <li>
               <h4>Graduation</h4>
-              <p class="suli">Veszprémi SZC Öveges József Technikum és Kollégium</p>
+              <p class="suli">
+                Veszprémi SZC Öveges József Technikum és Kollégium
+              </p>
               <p class="ev">2017-2021</p>
             </li>
             <li>
@@ -102,13 +117,13 @@
         <div>
           <h2>Experience</h2>
           <dl>
-            <dt>a</dt>
-            <dd>asddkhűáélwqedékewáé</dd>
+            <dt>programing</dt>
+            <dd>successful graduation in C#</dd>
           </dl>
         </div>
-        <div>
+        <div id="certificate">
           <h2>Certificates</h2>
-          <p>W.I.P.</p>
+          <p>Intermediate programming graduation</p>
         </div>
         <div id="nyelv">
           <h2>Languages</h2>
@@ -129,6 +144,23 @@
               <p>Coding</p>
             </div>
             <div>
+              <i class="fa-solid fa-cube"></i>
+              <p>Modeling</p>
+            </div>
+            <div>
+              <i class="fa-solid fa-pencil"></i>
+              <p>Art</p>
+            </div>
+            
+            <div>
+              <i class="fa-solid fa-music"></i>
+              <p>Music</p>
+            </div>
+            <div>
+              <i class="fa-solid fa-plane"></i>
+              <p>Traveling</p>
+            </div>
+            <div>
               <i class="fa-solid fa-cat"></i>
               <p>Cats</p>
             </div>
@@ -141,22 +173,24 @@
         document.body.classList.toggle("dark-theme");
         document.body.classList.toggle("light-theme");
       }
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
-      {
+      if (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+      ) {
         document.body.classList.toggle("dark-theme");
         document.body.classList.toggle("light-theme");
       }
-      function rezeg(){
-        document.getElementById('a').classList.add("fa-shake");
+      function rezeg() {
+        document.getElementById("a").classList.add("fa-shake");
       }
-      function nemRezeg(){
-        document.getElementById('a').classList.remove("fa-shake");
+      function nemRezeg() {
+        document.getElementById("a").classList.remove("fa-shake");
       }
-      function ugral(){
-        document.getElementById('b').classList.add("fa-beat");
+      function ugral() {
+        document.getElementById("b").classList.add("fa-beat");
       }
-      function nemUgral(){
-        document.getElementById('b').classList.remove("fa-beat");
+      function nemUgral() {
+        document.getElementById("b").classList.remove("fa-beat");
       }
     </script>
   </body>

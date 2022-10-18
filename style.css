@@ -52,6 +52,7 @@ dt {
     display: list-item;
     list-style-type: disc;
     margin-left: 40px;
+    margin-bottom: 10px;
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -73,11 +74,15 @@ li {
 }
 
 #nyelv ul {
-    column-count: 4;
+    column-count: 3;
 }
 
 .fa-download {
     float: right;
+}
+
+#certificate>p{
+    margin: 12px 40px;
 }
 
 #interests>div{
@@ -89,6 +94,7 @@ li {
 
 #interests div * {
     margin: auto;
+    margin-bottom: 5px;
 }
 
 article>div {
@@ -139,7 +145,19 @@ a{
 * {
     transition: color 0.1s ease, background-color .6s ease;
 }
-@media screen and (max-width:600px) {
+@media screen and (max-width:1000px) {
+    #interests>div{
+        grid-template-columns: repeat(5,1fr);
+    }
+}
+
+@media screen and (max-width:850px) {
+    #interests>div{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+@media screen and (max-width:700px) {
     main{
         width: 100%;
         margin:0px;
