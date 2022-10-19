@@ -1,13 +1,21 @@
 @media print{
-    body{
+    *, article, aside{
         color:black;
         background-color: white;
+        
     }
     main{
         width: 100%;
+        zoom: 78.5%;
+    }
+
+    #a, #b{
+        visibility: hidden;
     }
 }
-@page {  
-    margin: 0;  
+@page { 
+    orientation: portrait;  
+    size: A4; 
+    margin: 0;
 } 
 h1, h2, h3, h4, h5, h6 {page-break-after: avoid;}  
