@@ -76,11 +76,15 @@ li {
 #nyelv ul {
     column-count: 3;
 }
-
-.fa-download {
+.fa-download{
+    margin-bottom: 10px;
+}
+.fa-download, .fa-print{
     float: right;
 }
-
+br{
+    clear: both;
+}
 #certificate>p{
     margin: 12px 40px;
 }
@@ -144,6 +148,12 @@ a{
 
 * {
     transition: color 0.1s ease, background-color .6s ease;
+    animation: betolt 5s;
+}
+
+@keyframes betolt{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 @media screen and (max-width:1000px) {
     #interests>div{
